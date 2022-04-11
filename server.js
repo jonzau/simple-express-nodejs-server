@@ -15,7 +15,7 @@ app.listen(PORT, function () {
 });
 
 function onRequest(req, res, next) {
-  console.log(`${new Date()} Request: ${req.method} ${req.hostname} ${req.originalUrl} from ${req.ip} \n ${JSON.stringify({
+  console.log(`${new Date().toUTCString()} Request: ${req.method} ${req.hostname} ${req.originalUrl} from ${req.ip} \n ${JSON.stringify({
     method: req.method,
     hostname: req.hostname,
     originalUrl: req.originalUrl,
