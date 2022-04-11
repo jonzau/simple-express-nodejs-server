@@ -2,7 +2,7 @@ var express = require('express')
 var cors = require('cors')
 var app = express()
 
-const PORT = 1337;
+const PORT = process.env.PORT || 1337;
 
 app.use(cors())
 
