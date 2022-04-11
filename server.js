@@ -15,9 +15,8 @@ app.listen(PORT, function () {
 });
 
 function onRequest(req, res, next) {
-  console.log(`Request: ${req.method} ${req.host} (${req.hostname}) ${req.originalUrl} from ${req.ip} \n ${JSON.stringify({
+  console.log(`Request: ${req.method} ${req.hostname} ${req.originalUrl} from ${req.ip} \n ${JSON.stringify({
     method: req.method,
-    host: req.host,
     hostname: req.hostname,
     originalUrl: req.originalUrl,
     ip: req.ip,
