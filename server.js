@@ -15,5 +15,6 @@ app.listen(PORT, function () {
 });
 
 function onRequest(req, res, next) {
+  console.log(`Request: ${req.method} ${req.host} (${req.hostname}) ${req.originalUrl} from ${req.ip} with params ${JSON.stringify(req.params)}`);
   res.json({msg: 'This is CORS-enabled for all origins!' + ( req.params.id ? ` id: ${req.params.id}` : ' No id provided.')});
 }
